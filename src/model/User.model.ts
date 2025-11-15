@@ -1,4 +1,6 @@
+import { messageSchema } from "@/schemas/message.schema";
 import mongoose, { Schema, Document } from "mongoose";
+import { MessageSchema } from "./Message.model";
 
 // Document for type safety 
 
@@ -18,17 +20,6 @@ export interface User extends Document {
 }
 
 
-const MessageSchema: Schema<Message> = new Schema({
-    content: {
-        type: String,
-        required: true,
-    },
-    createdAt: {
-        type: Date,
-        required: true,
-        default: Date.now,
-    }
-})
 
 const UserSchema: Schema<User> = new Schema(
     {
