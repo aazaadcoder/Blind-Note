@@ -56,7 +56,7 @@ const UserSchema: Schema<User> = new Schema(
             type: Boolean,
             default: true,
         },
-        messages: [MessageSchema],
+        // messages: [MessageSchema],
 
     }
 )
